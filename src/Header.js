@@ -1,21 +1,12 @@
 import React from 'react';
 
 const Header = function(){
-    return(
-        <div className="header">
+    const headerStyle={textAlign:'center', padding:10, background:'black', color:'white', textTransform:'uppercase' };
+    return(        
+        <div style={ headerStyle }>
           Phone Directory
         </div>
     )
 }
-
-// class Header extends Component{
-//     render(){
-//         return(
-//             <div className="header">
-//                Phone Directory
-//             </div>
-//         )
-//     }
-// }
 
 export default Header;
