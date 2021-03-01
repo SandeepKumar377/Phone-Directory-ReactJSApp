@@ -17,6 +17,10 @@
     background: #7ab97a;
     color: #fff;
 }
+.delete-btn{
+    background:rgb(194, 104, 104);
+    color: #fff;
+}
 
 .grid-container {
     display: grid;
