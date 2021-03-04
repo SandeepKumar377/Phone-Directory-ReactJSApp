@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import AddSubscribers from './AddSubscribers';
 import reportWebVitals from './reportWebVitals';
+import './common/common.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AddSubscribers />
   </React.StrictMode>,
   document.getElementById('root')
 );
