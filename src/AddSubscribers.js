@@ -3,7 +3,24 @@ import Header from './Header';
 import './AddSubscribers.css';
 
 class AddSubscribers extends Component{
+
+    constructor(){
+        super();
+        this.state={
+            id:0,
+            name: '',
+            phone: ''
+        }
+        console.log(this.state);
+    }
+    inputChangedHandler=(e)=>{
+        const state=this.state;
+        state.[e.target.name] =e.target.value;
+        this.setState(state);
+        console.log(this.state);
+    }
     render(){
+        const{name, phone}= this.state;
         return(
             <div>
                 <Header heading="Add Subscribers"/>
@@ -11,13 +28,13 @@ class AddSubscribers extends Component{
                     <button className="custom-btn">Back</button>
                     <form>
                         <label htmlFor="name" className="label-control">Name:</label><br />
-                        <input id="name" type="text" className="input-control" name="name" /><br/><br/>
+                        <input id="name" type="text" className="input-control" name="name" onChange={this.inputChangedHandler} /><br/><br/>
                         <label htmlFor="phone" className="label-control">Phone:</label><br />
-                        <input id="phone" type="text" className="input-control" name="phone" /><br/><br/>
+                        <input id="phone" type="text" className="input-control" name="phone" onChange={this.inputChangedHandler} /><br/><br/>
                         <div className="subscriber-info-container">
                             <span className="subscriber-to-add-heading">Subscriber to be added:</span><br/>
-                            <span className="subcriber-info">Name:</span><br/>
-                            <span className="subcriber-info">Phone:</span>
+                            <span className="subcriber-info">Name: {name}</span><br/>
+                            <span className="subcriber-info">Phone: {phone}</span>
                         </div><br/>
                         <button type="submit" className="custom-btn add-btn">Add</button>
                     </form>

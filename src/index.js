@@ -8,7 +8,7 @@ import './common/common.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <AddSubscribers />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
